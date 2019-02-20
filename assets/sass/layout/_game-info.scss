@@ -1,0 +1,35 @@
+section.game-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.game-info__info-block{
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 7px;
+    width: 170px;
+    max-width: 170px;
+    margin: 10px;
+
+    p{
+      text-align: center;
+      margin: 8px;
+    }
+  }
+
+  div.game-info__start-game{
+    width: 170px;
+    max-width: 170px;
+
+    button{
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: #FFF;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}

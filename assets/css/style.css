@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-image: url(./../../../images/background-day.png);
+  background-position: top;
+  background-repeat: repeat-x;
+  background-color: #5EE270;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+header h1.header__title {
+  font-size: 1.2em;
+  color: #FFF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+header a.header__github {
+  font-size: 1.7em;
+  color: #FFF;
+}
+
+section.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.game-info div.game-info__info-block {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  width: 170px;
+  max-width: 170px;
+  margin: 10px;
+}
+section.game-info div.game-info__info-block p {
+  text-align: center;
+  margin: 8px;
+}
+section.game-info div.game-info__start-game {
+  width: 170px;
+  max-width: 170px;
+}
+section.game-info div.game-info__start-game button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */

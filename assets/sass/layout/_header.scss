@@ -1,0 +1,20 @@
+header{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  h1.header__title{
+    font-size: 1.2em;
+    color: #FFF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  a.header__github{
+    font-size: 1.7em;
+    color: #FFF;
+  }
+}
