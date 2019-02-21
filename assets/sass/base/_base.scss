@@ -6,11 +6,7 @@ html, body{
   margin: 0;
   overflow-x: hidden;
   font-family: 'Press Start 2P', cursive;
-}
-
-body{
-  background-image: url(./../../../images/background-day.png);
-  background-position: top;
-  background-repeat: repeat-x;
   background-color: $colour-grass;
+  position: relative;
+  z-index: -99;
 }

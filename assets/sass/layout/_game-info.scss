@@ -2,7 +2,13 @@ section.game-info{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background-image: url(./../../../images/background-small.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-color: $colour-sky;
+
 
   div.game-info__info-block{
     color: #FFF;
@@ -21,6 +27,7 @@ section.game-info{
   div.game-info__start-game{
     width: 170px;
     max-width: 170px;
+    margin: 15px 0px;
 
     button{
       width: 100%;

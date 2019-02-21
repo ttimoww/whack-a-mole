@@ -1,4 +1,8 @@
 section.game{
+  background-color: $colour-grass;
+  z-index: -2;
+  position: relative;
+
   div.game__container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -23,8 +27,8 @@ section.game{
 
 div.hole{
   position: relative;
-  border: 1px solid blue;
   overflow: hidden;
+  pointer-events: none;
   //padding top is set by js > padding is equal to mole height minus hole height
 
   img.hole__hole{
@@ -39,6 +43,7 @@ div.hole{
     bottom: 0px;
     transform: translateX(-50%);
     transition: .3s;
-    bottom: -100%;
+    bottom: 0; // -100% to hide
+    cursor: pointer;
   }
 }

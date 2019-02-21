@@ -8,13 +8,9 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Press Start 2P", cursive;
-}
-
-body {
-  background-image: url(./../../../images/background-day.png);
-  background-position: top;
-  background-repeat: repeat-x;
   background-color: #5EE270;
+  position: relative;
+  z-index: -99;
 }
 
 header {
@@ -23,6 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  background-color: #4EC0CA;
 }
 header h1.header__title {
   font-size: 1.2em;
@@ -40,7 +37,12 @@ section.game-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background-image: url(./../../../images/background-small.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-color: #4EC0CA;
 }
 section.game-info div.game-info__info-block {
   color: #FFF;
@@ -57,6 +59,7 @@ section.game-info div.game-info__info-block p {
 section.game-info div.game-info__start-game {
   width: 170px;
   max-width: 170px;
+  margin: 15px 0px;
 }
 section.game-info div.game-info__start-game button {
   width: 100%;
@@ -69,6 +72,11 @@ section.game-info div.game-info__start-game button {
   cursor: pointer;
 }
 
+section.game {
+  background-color: #5EE270;
+  z-index: -2;
+  position: relative;
+}
 section.game div.game__container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -101,8 +109,8 @@ section.game div.game__container div#hole5 {
 
 div.hole {
   position: relative;
-  border: 1px solid blue;
   overflow: hidden;
+  pointer-events: none;
 }
 div.hole img.hole__hole {
   width: 100%;
@@ -115,7 +123,8 @@ div.hole img.hole__mole {
   bottom: 0px;
   transform: translateX(-50%);
   transition: 0.3s;
-  bottom: -100%;
+  bottom: 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
