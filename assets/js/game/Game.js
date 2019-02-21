@@ -33,5 +33,6 @@ class Game{
   */
   increaseScore(){
     this.score += 1;
+    $('#current-score').html(this.score);
   }
 }

@@ -28,15 +28,8 @@ section.game{
 div.hole{
   position: relative;
   overflow: hidden;
-  pointer-events: none;
-  //padding top is set by js > padding is equal to mole height minus hole height
-
-  img.hole__hole{
-    width: 100%;
-  }
 
   img.hole__mole{
-    z-index: -1;
     width: 50%;
     position: absolute;
     left: 50%;
@@ -45,5 +38,11 @@ div.hole{
     transition: .3s;
     bottom: 0; // -100% to hide
     cursor: pointer;
+  }
+
+  img.hole__hole{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }

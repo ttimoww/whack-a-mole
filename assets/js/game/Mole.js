@@ -11,15 +11,25 @@ class Mole{
     this.setListener();
     $(this.element).css('bottom', '0');
     setTimeout(() => {
-      $(this.element).css('bottom', '-100%');
-      $(this.element).unbind('click');
+      this.hideMole();
     }, time)
   }
 
+  /**
+  * Hide the mole
+  */
+  hideMole(){
+    $(this.element).css('bottom', '-100%');
+  }
+
+  /**
+  * Set event listener on mole in the DOM to increase the score
+  */
   setListener(){
-    $(this.element).click(function() {
-      console.log('score');
+    $(this.element).click(() => {
       game.increaseScore();
+      this.hideMole();
+      $(this.element).off();
     });
   }
 }
