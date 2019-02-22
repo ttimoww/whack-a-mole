@@ -9,7 +9,7 @@ class Mole{
   * @param {number} time Time (in ms) the mole will be visible.
   */
   showMole(time){
-    console.log('show');
+    $(this.element).off().unbind('click')
     this.setListener();
     $(this.element).css('bottom', '0');
     setTimeout(() => {
@@ -22,6 +22,9 @@ class Mole{
   */
   hideMole(){
     $(this.element).css('bottom', '-100%');
+    setTimeout(() => {
+      $(this.element).off();
+    }, 300);
   }
 
   /**
@@ -29,10 +32,10 @@ class Mole{
   */
   setListener(){
     $(this.element).click(() => {
+      $(this.element).off();
       this.game.increaseScore();
       console.log('score');
       this.hideMole();
-      $(this.element).off();
     });
   }
 }

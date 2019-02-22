@@ -15,17 +15,18 @@
     <section class="game-info">
       <div class="game-info__info-block">
         <p>highscore</p>
-        <p>0</p>
+        <p id="highScore">0</p>
       </div>
       <div class="game-info__info-block">
         <p>current score</p>
         <p id="current-score">0</p>
       </div>
       <div class="game-info__start-game">
-        <button type="button" id="start-game" >start game</button>
+        <button type="button" id="start-game">start game</button>
+        <p id="game-timer">0</p>
       </div>
     </section>
-    <section class="game">
+    <section class="game noselect">
       <div class="game__container">
         <div class="hole" id="hole1">
           <img src="./images/mole.png" class="hole__mole" draggable="false">
@@ -52,7 +53,8 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="./assets/js/gameStyles.js" charset="utf-8"></script>
-  <script src="./assets/js/main.js" charset="utf-8"></script>
   <script src="./assets/js/game/Game.js" charset="utf-8"></script>
   <script src="./assets/js/game/Mole.js" charset="utf-8"></script>
+  <script src="./assets/js/game/Model.js" charset="utf-8"></script>
+  <script src="./assets/js/main.js" charset="utf-8"></script>
 </html>

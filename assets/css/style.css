@@ -13,6 +13,22 @@ html, body {
   z-index: -99;
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+}
+
 header {
   padding: 10px;
   display: flex;
@@ -39,7 +55,7 @@ section.game-info {
   align-items: center;
   padding-bottom: 100px;
   box-sizing: border-box;
-  background-image: url(./../../../images/background-small.png);
+  background-image: url(./../../images/background-small.png);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: #4EC0CA;
@@ -59,7 +75,12 @@ section.game-info div.game-info__info-block p {
 section.game-info div.game-info__start-game {
   width: 170px;
   max-width: 170px;
-  margin: 15px 0px;
+  margin-top: 15px;
+}
+section.game-info div.game-info__start-game p {
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 0;
 }
 section.game-info div.game-info__start-game button {
   width: 100%;
@@ -70,6 +91,8 @@ section.game-info div.game-info__start-game button {
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  margin: 0;
+  height: 15px;
 }
 
 section.game {
