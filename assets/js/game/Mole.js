@@ -1,6 +1,7 @@
 class Mole{
-  constructor(el){
-    this.element = el;
+  constructor(el, gm){
+    this.element = el,
+    this.game = gm
   }
 
   /**
@@ -8,6 +9,7 @@ class Mole{
   * @param {number} time Time (in ms) the mole will be visible.
   */
   showMole(time){
+    console.log('show');
     this.setListener();
     $(this.element).css('bottom', '0');
     setTimeout(() => {
@@ -27,7 +29,8 @@ class Mole{
   */
   setListener(){
     $(this.element).click(() => {
-      game.increaseScore();
+      this.game.increaseScore();
+      console.log('score');
       this.hideMole();
       $(this.element).off();
     });
