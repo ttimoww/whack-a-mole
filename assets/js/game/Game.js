@@ -89,9 +89,8 @@ class Game{
       this.moles[i].hideMole();
     }
     clearInterval(gameLoop);
-    clearInterval(gameTimer, () =>{
-      $('#game-timer').html('0');
-    });
+    clearInterval(gameTimer);
+    $('#game-timer').html('0');
     this.model.save(this.score);
   }
 }
