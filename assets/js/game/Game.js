@@ -3,6 +3,7 @@ class Game{
     this.moles = this.initMoles();
     this.model = new Model();
     this.score = 0,
+    this.moleInterval = 500,
     this.gameDuration = 30000
   }
 
@@ -31,7 +32,7 @@ class Game{
     for (var i = 0; i < this.moles.length; i++) {
       $(this.moles[i].element).css('bottom', '-100%');
     }
-    this.startGameLoop(this.gameDuration, 500)
+    this.startGameLoop(this.gameDuration, this.moleInterval)
   }
 
   /**
@@ -51,7 +52,7 @@ class Game{
     }, 1000)
 
     const gameLoop = setInterval(() =>{
-      const time = randTime(500, 1800);
+      const time = randTime(500, 1500);
       const mole = randMole();
 
       mole.showMole(time);
@@ -70,7 +71,7 @@ class Game{
     this.score += 1;
     $('#current-score').html(this.score);
 
-    var sound = document.createElement("audio");
+    const sound = document.createElement("audio");
     sound.src = '/sounds/score.wav';
     sound.volume = 0.1;
     sound.autoPlay = false;
@@ -90,7 +91,7 @@ class Game{
     }
     clearInterval(gameLoop);
     clearInterval(gameTimer);
-    $('#game-timer').html('0');
+    $('#game-timer').html('Game Over');
     this.model.save(this.score);
   }
 }
