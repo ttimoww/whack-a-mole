@@ -1,5 +1,5 @@
 # Whack a Mole
-[Whack a Mole](http://whackamole.timowernars.com)
+[Whack a Mole](https://ttimoww.github.io/whack-a-mole/)
 
 ## Made with
 * HTML
